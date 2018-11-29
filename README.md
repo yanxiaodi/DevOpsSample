@@ -1,3 +1,3 @@
 # DevOpsSample
 
-The sample project for DevOps.
+The sample project for DevOps. Hello.
