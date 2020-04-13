@@ -22,7 +22,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '$(projectPath)'
-    arguments: '-r linux-x64 -c $(buildConfiguration)'
+    arguments: '-r linux-x64 -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
