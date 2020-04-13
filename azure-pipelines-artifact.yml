@@ -11,8 +11,11 @@ variables:
   projectPath: '**/DevOpsSample.WebApp'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- task: UseDotNet@2
+  displayName: 'use dotnet core cli'
+  inputs:
+    packageType: 'sdk'
+    version: '3.1.x'
 
 - task: DotNetCoreCLI@2
   inputs:
