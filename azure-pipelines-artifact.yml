@@ -23,7 +23,6 @@ steps:
     publishWebProjects: false
     projects: '$(projectPath)'
     arguments: '-r linux-x64 -c $(buildConfiguration)'
-    zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
   inputs:
