@@ -25,8 +25,8 @@ namespace DevOpsSample.WebApp.Controllers
         public IActionResult Index()
         {
             ViewData["myKeyValue"] = _configuration["MyKey"];
-            ViewData["title"] = _configuration["Position:Title"];
-            ViewData["name"] = _configuration["Position:Name"];
+            ViewData["positionTitle"] = _configuration["Position:Title"];
+            ViewData["positionName"] = _configuration["Position:Name"];
             return View();
         }
 
