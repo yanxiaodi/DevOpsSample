@@ -6,20 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DevOpsSample.WebApp.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace DevOpsSample.WebApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,
+            IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
         {
+            ViewData["myKeyValue"] = _configuration["MyKey"];
+            ViewData["title"] = _configuration["Position:Title"];
+            ViewData["name"] = _configuration["Position:Name"];
             return View();
         }
 
