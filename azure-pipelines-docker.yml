@@ -16,4 +16,5 @@ steps:
     containerRegistry: 'devopslab'
     repository: 'devops-sample-webapp'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '/Dockerfile'
+    buildContext: '$(System.DefaultWorkingDirectory)/DevOpsSample.WebApp'
