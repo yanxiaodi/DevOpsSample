@@ -17,4 +17,4 @@ steps:
     repository: 'devops-sample-webapp'
     command: 'buildAndPush'
     Dockerfile: '$(System.DefaultWorkingDirectory)/Dockerfile'
-    buildContext: '$(System.DefaultWorkingDirectory)/DevOpsSample.WebApp'
+    buildContext: '$(System.DefaultWorkingDirectory)'
