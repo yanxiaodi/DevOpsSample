@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "devops-test-webapp-plan-prod"
+    },
+    "skuName": {
+      "value": "B3"
+    },
+    "webSiteName": {
+      "value": "devops-test-prod-2020"
+    } 
+  }
+}
