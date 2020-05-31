@@ -2,7 +2,7 @@
 
 Param(
     [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
-    [string] $ResourceGroupName = 'DevOps-test',
+    [string] $ResourceGroupName = 'devops-test',
     [switch] $UploadArtifacts,
     [string] $StorageAccountName,
     [string] $StorageContainerName = $ResourceGroupName.ToLowerInvariant() + '-stageartifacts',
@@ -90,8 +90,8 @@ if ($UploadArtifacts) {
 }
 
 # Create the resource group only when it doesn't already exist
-if ((Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -ErrorAction SilentlyContinue) -eq $null) {
-    New-AzureRmResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -Force -ErrorAction Stop
+if ((Get-AzResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -ErrorAction SilentlyContinue) -eq $null) {
+    New-AzResourceGroup -Name $ResourceGroupName -Location $ResourceGroupLocation -Verbose -Force -ErrorAction Stop
 }
 
 
@@ -109,7 +109,7 @@ if ($ValidateOnly) {
     }
 }
 else {
-    New-AzureRmResourceGroupDeployment -Name ((Get-ChildItem $TemplateFile).BaseName + '-' + ((Get-Date).ToUniversalTime()).ToString('MMdd-HHmm')) `
+    New-AzResourceGroupDeployment -Name ((Get-ChildItem $TemplateFile).BaseName + '-' + ((Get-Date).ToUniversalTime()).ToString('MMdd-HHmm')) `
                                        -ResourceGroupName $ResourceGroupName `
                                        -TemplateFile $TemplateFile `
                                        -TemplateParameterFile $TemplateParametersFile `
