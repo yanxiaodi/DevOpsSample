@@ -39,7 +39,7 @@
       "value": "1"
     },
     "linuxFxVersion": {
-      "value": "DOCKER|devopstestcr2020.azurecr.io/null:null"
+      "value": "DOCKER|devopstestcr2020.azurecr.io/devops-sample-webapp:latest"
     },
     "dockerRegistryUrl": {
       "value": "https://devopstestcr2020.azurecr.io"
