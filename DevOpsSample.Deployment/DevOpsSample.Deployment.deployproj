@@ -28,7 +28,6 @@
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="WebSite.json" />
-    <Content Include="WebSite.parameters.json" />
     <None Include="environments\azuredeploy.parameters.prod.json" />
     <None Include="environments\azuredeploy.parameters.stage.json" />
   </ItemGroup>

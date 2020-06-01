@@ -2,14 +2,56 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "hostingPlanName": {
-      "value": "devops-test-webapp-plan-prod"
+    "subscriptionId": {
+      "value": "76760d52-2d57-4b56-9ba6-f0f5044f60a6"
     },
-    "skuName": {
+    "name": {
+      "value": "devops-test-prod2020"
+    },
+    "location": {
+      "value": "Australia East"
+    },
+    "hostingEnvironment": {
+      "value": ""
+    },
+    "hostingPlanName": {
+      "value": "devops-test-serviceplan-prod"
+    },
+    "serverFarmResourceGroup": {
+      "value": "devops-test"
+    },
+    "alwaysOn": {
+      "value": false
+    },
+    "sku": {
+      "value": "Basic"
+    },
+    "skuCode": {
       "value": "B3"
     },
-    "webSiteName": {
-      "value": "devops-test-prod-2020"
-    } 
+    "workerSize": {
+      "value": "0"
+    },
+    "workerSizeId": {
+      "value": "0"
+    },
+    "numberOfWorkers": {
+      "value": "1"
+    },
+    "linuxFxVersion": {
+      "value": "DOCKER|devopstestcr2020.azurecr.io/null:null"
+    },
+    "dockerRegistryUrl": {
+      "value": "https://devopstestcr2020.azurecr.io"
+    },
+    "dockerRegistryUsername": {
+      "value": "devopstestcr2020"
+    },
+    "dockerRegistryPassword": {
+      "value": "SLD9JngvZUTGwtF/a7XvmxEIQ7IKMtrd"
+    },
+    "dockerRegistryStartupCommand": {
+      "value": ""
+    }
   }
 }
