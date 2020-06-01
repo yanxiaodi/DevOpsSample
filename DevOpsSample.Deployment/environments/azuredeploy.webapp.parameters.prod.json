@@ -1,0 +1,42 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subscriptionId": {
+      "value": "76760d52-2d57-4b56-9ba6-f0f5044f60a6"
+    },
+    "name": {
+      "value": "devops-test-prod2020"
+    },
+    "location": {
+      "value": "Australia East"
+    },
+    "hostingEnvironment": {
+      "value": ""
+    },
+    "hostingPlanName": {
+      "value": "devops-test-serviceplan-prod"
+    },
+    "serverFarmResourceGroup": {
+      "value": "devops-test"
+    },
+    "alwaysOn": {
+      "value": false
+    },
+    "linuxFxVersion": {
+      "value": "DOCKER|devopstestcr2020.azurecr.io/null:null"
+    },
+    "dockerRegistryUrl": {
+      "value": "https://devopstestcr2020.azurecr.io"
+    },
+    "dockerRegistryUsername": {
+      "value": "devopstestcr2020"
+    },
+    "dockerRegistryPassword": {
+      "value": "SLD9JngvZUTGwtF/a7XvmxEIQ7IKMtrd"
+    },
+    "dockerRegistryStartupCommand": {
+      "value": ""
+    }
+  }
+}

@@ -26,11 +26,14 @@
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
-    <Content Include="Deploy-AzureResourceGroup.ps1" />
-    <Content Include="WebSite.json" />
-    <Content Include="WebSite.parameters.json" />
-    <None Include="environments\azuredeploy.parameters.prod.json" />
-    <None Include="environments\azuredeploy.parameters.stage.json" />
+    <Content Include="Deploy-WebApp.ps1" />
+    <Content Include="Deploy-ServicePlan.ps1" />
+    <Content Include="webapp.json" />
+    <Content Include="serviceplan.json" />
+    <None Include="environments\azuredeploy.webapp.parameters.prod.json" />
+    <None Include="environments\azuredeploy.webapp.parameters.stage.json" />
+    <None Include="environments\azuredeploy.serviceplan.parameters.prod.json" />
+    <None Include="environments\azuredeploy.serviceplan.parameters.stage.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
