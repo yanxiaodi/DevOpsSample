@@ -17,3 +17,4 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '$(System.DefaultWorkingDirectory)/Dockerfile'
     buildContext: '$(System.DefaultWorkingDirectory)'
+    tags: 'latest'
